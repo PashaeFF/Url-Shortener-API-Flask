@@ -1,0 +1,31 @@
+GET Short URL with url ID
+---
+tags:
+  - Get Short URL with url ID
+
+
+parameters:
+  - name: id
+    in: path
+    type: string
+    required: true
+    default: 3
+      
+  - in: header
+    name: Authorization
+    required: true
+
+
+
+responses:
+  200:
+    description: Creat Short URL
+    schema:
+      items:
+        type: object
+      example: {id: "int", created_at: "string", updated_at: "string", url: "string", url_title: "string"}
+
+  401:
+    description: Fails to get items due to authentication error
+
+  

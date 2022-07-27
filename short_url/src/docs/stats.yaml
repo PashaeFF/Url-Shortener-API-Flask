@@ -1,0 +1,26 @@
+GET stats about Shortener
+---
+tags:
+  - Statistics
+
+parameters:    
+  - in: header
+    name: Authorization
+    required: true
+    
+
+responses:
+  200:
+    description: List items and paginate
+    schema:
+      type: array
+      items:
+        # type: object
+        example: {"data" :[{id:, created_at:, updated_at:, url:, url_title:, visits_count:}],"meta":  {"page":,'pages': ,'total_count': ,'prev_page': ,'next_page': ,'has_next': ,'has_prev': }}
+
+
+
+  401:
+    description: Fails to get items due to authentication error
+
+    

@@ -1,0 +1,31 @@
+GET stats for short url ID
+---
+tags:
+  - Statistics
+
+
+parameters:
+  - name: id
+    in: path
+    type: string
+    required: true
+    default: 3
+      
+  - in: header
+    name: Authorization
+    required: true
+    
+
+responses:
+  200:
+    description: Dict items
+    schema:
+      type: dict
+      items:
+        type: string
+      example: {id:, device_ip:, device_visits_count:, device_visit_date:, url_title:, visits_count:}
+
+  401:
+    description: Fails to get items due to authentication error
+
+    

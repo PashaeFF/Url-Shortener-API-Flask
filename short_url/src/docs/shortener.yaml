@@ -1,0 +1,41 @@
+GET URLShortener
+---
+tags:
+  - UrlShortener
+
+parameters:    
+  - in: header
+    name: Authorization
+    required: true
+  - in: body
+    name: body
+    schema:
+      id: UrlShortner
+      required:
+        - url_title
+        - url
+      properties:
+        url_title:
+          type: string
+          description: url title for URL
+        url:
+          type: string
+          description: URL for shorting
+
+  
+    
+
+
+responses:
+  200:
+    description: Creat Short URL
+    schema:
+      type: array
+      items:
+        type: dict
+      example: [{id:, created_at:, updated_at:, url:, url_title:}]
+
+  401:
+    description: Fails to get items due to authentication error
+
+    
