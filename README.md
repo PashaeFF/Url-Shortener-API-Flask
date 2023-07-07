@@ -62,7 +62,7 @@ $ python3 -m venv env
 ```
 #### Second
 ```
-$ .env/bin/activate
+$ source env/bin/activate
 $ pip install -r requirments.txt
 
 ```
